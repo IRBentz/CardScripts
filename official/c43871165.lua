@@ -21,7 +21,7 @@ function s.initial_effect(c)
 	e2:SetType(EFFECT_TYPE_IGNITION)
 	e2:SetRange(LOCATION_MZONE)
 	e2:SetCountLimit(1,{id,1})
-	e2:SetCost(s.mdescost)
+	e2:SetCost(aux.CostWithReplace(s.mdescost,EFFECT_POWER_PATRON_REPLACE))
 	e2:SetTarget(s.mdestg)
 	e2:SetOperation(s.mdesop)
 	c:RegisterEffect(e2)
@@ -41,7 +41,7 @@ end
 s.listed_names={68231287} --"Jupiter the Power Patron of Destruction"
 s.listed_series={SET_POWER_PATRON,SET_DOOMZ}
 function s.pdesfilter(c)
-	return c:IsSetCard({SET_POWER_PATRON,SET_DOOMZ}) and (c:IsFaceup() or c:IsLocation(LOCATION_HAND)) and c:IsMonster()
+	return c:IsSetCard({SET_POWER_PATRON,SET_DOOMZ}) and c:IsMonster() and (c:IsFaceup() or c:IsLocation(LOCATION_HAND))
 end
 function s.pdestg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(s.pdesfilter,tp,LOCATION_MZONE|LOCATION_HAND,0,1,nil) end

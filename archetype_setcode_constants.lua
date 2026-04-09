@@ -121,6 +121,7 @@ SET_GEM_KNIGHT                    = 0x1047
 SET_NUMBER                        = 0x48
 SET_NUMBER_C                      = 0x1048
 SET_NUMBER_C39                    = 0x5048
+SET_NUMBER_99                     = 0x8048
 SET_SKYBLASTER                    = 0x49
 SET_TIMELORD                      = 0x4a
 SET_AESIR                         = 0x4b
@@ -436,6 +437,7 @@ SET_ELDLICH                       = 0x142
 SET_ELDLIXIR                      = 0x143
 SET_GOLDEN_LAND                   = 0x144
 SET_PHANTASM                      = 0x145
+SET_SACRED_BEAST                  = 0x1145
 SET_DOGMATIKA                     = 0x146
 SET_MELFFY                        = 0x147
 SET_POTAN                         = 0x148
@@ -604,4 +606,7 @@ SET_ELFNOTE                       = 0x1d0
 SET_GMX                           = 0x1d4
 --Released but the official English name is unconfirmed
 SET_CLOWN_CREW                    = 0x1d3
+SET_DARK_TUNER                    = 0x1d5
 --Pre-release archetypes
+SET_BLITZCLIQUE                   = 0x1d6
+SET_THEOREALIZE                   = 0x1d7

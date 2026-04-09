@@ -387,6 +387,10 @@ end
 function Card.HasEquipCard(c)
 	return c:GetEquipCount()>0
 end
+function Card.IsCoLinked(c,count)
+	count=count or 1
+	return c:GetMutualLinkedGroupCount()>=count
+end
 
 function Card.IsDestination(c,dest)
 	return c:GetDestination()==dest
@@ -2884,4 +2888,3 @@ Duel.LoadScript("proc_gemini.lua")
 Duel.LoadScript("proc_spirit.lua")
 Duel.LoadScript("proc_unofficial.lua")
 Duel.LoadScript("deprecated_functions.lua")
-pcall(dofile,"init.lua")
